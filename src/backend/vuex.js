@@ -27,6 +27,17 @@ export function initVuexBackend (hook, bridge) {
     })
   })
 
+  // application -> devtool
+  hook.on('vuex:action', action => {
+    bridge.send('vuex:action', {
+      action: {
+        wtf: true
+      },
+      timestamp: Date.now(),
+      snapshot: getSnapshot()
+    })
+  })
+
   // devtool -> application
   bridge.on('vuex:travel-to-state', state => {
     hook.emit('vuex:travel-to-state', state)

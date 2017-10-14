@@ -16,6 +16,13 @@
       <i class="material-icons">device_hub</i>
       <span class="pane-name">Components</span>
     </a>
+    <a class="button actions"
+      :class="{ active: tab === 'actions'}"
+      @click="switchTab('actions')"
+      title="Switch to Actions">
+      <i class="material-icons">star_border</i>
+      <span class="pane-name">Actions</span>
+    </a>
     <a class="button vuex"
       :class="{ active: tab === 'vuex'}"
       @click="switchTab('vuex')"
