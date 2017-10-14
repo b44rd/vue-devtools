@@ -54,6 +54,7 @@
 import ComponentsTab from './views/components/ComponentsTab.vue'
 import EventsTab from './views/events/EventsTab.vue'
 import VuexTab from './views/vuex/VuexTab.vue'
+import ActionsTab from './views/actions/ActionsTab.vue'
 
 import { mapState } from 'vuex'
 
@@ -69,7 +70,8 @@ export default {
   components: {
     components: ComponentsTab,
     vuex: VuexTab,
-    events: EventsTab
+    events: EventsTab,
+    actions: ActionsTab
   },
   computed: mapState({
     message: state => state.message,
